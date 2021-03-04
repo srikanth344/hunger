@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+   <body>
+<div>
+      <form action = "http://localhost:5000/updateuser1" method = "POST">
+	 <input type = "hidden" name = "enquiryid" value="{{user1[0]}}"
+         <label>firstname</label><input type = "text" name = "firstname" value="{{user1[1]}}" placeholder="firstname" />
+         <label>lastname</label><input type = "text" name = "lastname" value="{{user1[2]}}" placeholder="lastname" />
+         <label>hno</label><input type = "text" name = "hno" value="{{user1[3]}}" placeholder="hno" />
+         <label>street</label><input type = "text" name = "street" value="{{user1[4]}}" placeholder="street" />
+         <label>city</label><input type = "text" name = "city" value="{{user1[5]}}" placeholder="city" />
+         <label>pin</label><input type = "text" name = "pin" value="{{user1[6]}}" placeholder="pin" />
+         <label>cell</label><input type = "text" name = "cell" value="{{user1[7]}}" placeholder="cell" />
+         <label>email</label><input type = "text" name = "email" value="{{user1[8]}}" placeholder="email" />
+         <label>remarks</label><input type = "text" name = "remarks" value="{{user1[9]}}" placeholder="remarks" />      
+         <p><input type = "submit" value = "Update" /></p>
+	{{ result }}
+      </form>
+</div>
+   </body>
+</html>

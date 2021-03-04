@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+#users {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#users td, #users th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#users tr:nth-child(even){background-color: #f2f2f2;}
+
+#users tr:hover {background-color: #ddd;}
+
+#users th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+<table id="users" border=1 align=center>
+<tr><th>action</th><th>enquiryid</th><th>firstname</th><th>lastname</th><th>hno</th><th>street</th><th>city</th><th>pin</th><th>cell</th><th>email</th><th>remarks</th></tr>
+{% for r in result %}
+<tr>
+     <td><a href="http://localhost:5000/upuser1/{{r[0]}}">update</a>|<a href="http://localhost:5000/deluser1/{{r[0]}}">delete</a></td>
+{% for v in r %}
+    <td>{{v}}</td>
+{%endfor%}
+</tr>
+
+{% endfor %}
+<tr><td colspan=11><a href="http://localhost:5000/">insert</a></td></tr>
+<tr><td colspan=11>{{error}}</a></td></tr>
+</table>
+</body>
+</html>
